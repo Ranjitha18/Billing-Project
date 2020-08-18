@@ -1,0 +1,40 @@
+<div *ngIf="islogin; else ec ">
+   <div class="sidenav">
+      <section>
+         <br>
+         <div class="login-main-text">
+            <h2><SPAN STYLE="color: rgb(240, 240, 240); font-size: 55pt;align-content: center;">Water Billing System
+            </SPAN></h2>
+            
+            <br>
+       <p><span style="color: rgb(69, 139, 201); font-size: 20pt;font-family:Quicksand-Light ;"><b>Admin Log In</b></span>
+       </p>    
+         </div>
+
+<div style="padding-left: 40%;">
+              
+  <div class="col-md-4 main " >
+     <div class="login-form">
+        <div class="form-group">
+           <label><span style="color: aliceblue"><b>Username</b> </span></label>
+           <input type="text " class="form-control" placeholder="User Name" [(ngModel)]="username">
+        </div>
+        <div class="form-group">
+           <label><span style="color: aliceblue"><b>Password</b></span></label>
+           <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="btn btn-secondary" (click)="login()">Login</button>
+     </div> 
+     </div>
+</div>
+
+ </section> 
+
+</div>
+</div>
+
+<ng-template #ec>
+  <app-header></app-header>
+   
+ </ng-template>
+  
