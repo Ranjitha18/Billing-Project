@@ -1,61 +1,59 @@
-<div class="sidenav">
+
              
-  <section>
-     <br>
-        
-     <div class="login-main-text">
-           
-        <h2><SPAN STYLE="color: rgb(240, 240, 240); font-size: 55pt;align-content: center;">Water Billing System
-                 </SPAN></h2>
-                
-                 <br>
-        <p><span style="color: aliceblue; font-size: 20pt;font-family:Quicksand-Light ;"><b>Add new Customer</b></span>
-        </p>
-     </div>
-      
+  <section class="conatiner-fluid bg-light p-4">
+     <h3>{{isNew?"New":"Edit"}}CustomerList</h3>
      
      <div style="padding-left: 40%;">
         
            <div class="col-md-4 main " >
-              <div class="login-form">
+              <form class="form">
                   <div class="form-group ">
-                      <label class = "form-label">Name : </label>
-                      <input type="text" class="form-control" [(ngModel)]= "clist.name"  name = "name" />
+                      <label class = "form-label">WaterMeterNo : </label>
+                      <input type="text" class="form-control" 
+                      [(ngModel)]= "list.waterMeterNo"  name = "WaterMeterNo" >
                     </div>
                     <div class="form-group">
-                      <label class = "form-label" >WaterMeterNo :</label>
-                      <input type="text" class="form-control" [(ngModel)]="clist.WaterMeterNo"  name= "WaterMeterNo" />
+                      <label class = "form-label" >Name :</label>
+                      <input type="text" class="form-control" 
+                      [(ngModel)]="list.name"  name= "Name" >
                     </div>
                     <div class="form-group">
                       <label class = "form-label">CustomerCode :</label>
-                      <input type="text" class="form-control" [(ngModel)]="clist.CustomerCode"    name = "CustomerCode">
+                      <input type="text" class="form-control"
+                       [(ngModel)]="list.customerCode"    name = "CustomerCode">
                     </div>
                     
                     <div class="form-group">
                       <label class = "form-label">Address :</label>
-                      <input type="text" class="form-control" [(ngModel)]="clist.Address"    name = "Address">
+                      <input type="text" class="form-control" 
+                      [(ngModel)]="list.address"    name = "Address">
                     </div>
                       
                     <div class="form-group">
                       <label class = "form-label">PhoneNo :</label>
-                      <input type="text" class="form-control" [(ngModel)]="clist.PhoneNo"    name = "PhoneNo">
+                      <input type="text" class="form-control" 
+                      [(ngModel)]="list.phoneNo"    name = "PhoneNo">
                     </div>
 
                     <div class="form-group">
                       <label class = "form-label">PresentMR :</label>
-                      <input type="text" class="form-control" [(ngModel)]="clist.PresentMR"    name = "PresentMR">
+                      <input type="text" class="form-control"
+                       [(ngModel)]="list.presentMR"    name = "PresentMR">
                     </div>
 
                     <div class="form-group">
                       <label class = "form-label">PreviousMR :</label>
-                      <input type="email" class="form-control" [(ngModel)]="clist.PreviousMR"    name = "PreviousMR">
+                      <input type="text" class="form-control" 
+                      [(ngModel)]="list.previousMR"    name = "PreviousMR">
                     </div>
  
                     <div class="form-group text-center">
-                      <button (click)="add()" class="btn btn-primary" >submit</button>                          </div> 
-           </div>
+                      <button (click)="addC()">submit</button>                 
+                             </div> 
+                  </form>
+                    </div>
         
-        </div>
+       
       </div>
 
-  </section>
+ </section>

@@ -1,7 +1,19 @@
 <div class = "add"> 
     <a routerLink="/add" routerLinkActive="active-link"><button class="btn btn-success pull-right" > Add Customer</button></a>
     </div>
-<section>
+<section class="container-fluide p-4 bg-success">
+    
+    <app-message-box *ngIf="!errMsg && !list" 
+                    type="info" 
+                    title="Please Wait" 
+                    message="loading data from server for you..." >
+    </app-message-box>
+
+    <app-message-box *ngIf="errMsg" 
+                    type="danger" 
+                    title="Error" 
+                    [message]="errMsg" >
+    </app-message-box>
     <div class="container">
 <div *ngIf="list" class="card card-primary">
     <div class="card-header">
@@ -25,17 +37,24 @@
             <th>Name</th>
             <th> WaterMeterNo</th>
             <th> CustomerCode</th>
-            <th> Deatils</th>
-           
+            <th>Address</th>
+            <th>PhoneNo</th>
+            <th>PresentMR</th>
+            <th>PreviousMR</th>
+            <th>Details</th>
            
           </tr>
         </thead>
         <tbody>
          <tr   *ngFor= "let b of list">
 
-                <td>{{b.Name}}</td>
-                <td>{{b.WaterMeterNo}}</td>
-                <td>{{b.CustomerCode}}</td>
+                <td>{{b.waterMeterNo}}</td>
+                <td>{{b.name}}</td>
+                <td>{{b.customerCode}}</td>
+                <td>{{b.address}}</td>
+                <td>{{b.phoneNo}}</td>
+                <td>{{b.presentMR}}</td>
+                <td>{{b.previousMR}}</td>
                 
                 <td>
                     <a routerLink="/view" class="btn btn-sm btn-primary mr-2">Details</a>

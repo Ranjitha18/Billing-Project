@@ -11,7 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { CustomerSearchComponent } from './customer-search/customer-search.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ViewComponent } from './view/view.component';
-import {HttpClientModule, HttpClient} from '@angular/common/http'
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { MessageBoxComponent } from './message-box/message-box.component'
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http'
     CustomerSearchComponent,
     AddCustomerComponent,
     ViewComponent,
+    MessageBoxComponent,
     
   ],
   imports: [

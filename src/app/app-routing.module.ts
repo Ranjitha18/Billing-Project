@@ -9,7 +9,7 @@ import { ViewComponent } from './view/view.component';
 const routes: Routes = [
   {path:'',component :HomeComponent},
   {path : 'admin', component: AdminComponent},
-  {path : 'list', component:CustomerSearchComponent},
+  {path : 'list/:WaterMeterNo', component:CustomerSearchComponent},
   {path : 'add', component:AddCustomerComponent},
   {path :'view', component:ViewComponent},
 ];
