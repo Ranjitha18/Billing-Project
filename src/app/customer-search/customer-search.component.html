@@ -15,11 +15,9 @@
                     [message]="errMsg" >
     </app-message-box>
     <div class="container">
-<div *ngIf="list" class="card card-primary">
-    <div class="card-header">
-        <h3>Customer List</h3>
-    </div>
-    <div class="card-body p-4">
+        <br>
+         <input class="form-control" type="text" [(ngModel)]=searchText placeholder="search Food" /> 
+        <h3 class="text-center">Customer List</h3>
         <table class="table table-striped table-bordered" border="1 ">
             <thead class="bg-secondary">
             <!-- <tr>
@@ -37,27 +35,20 @@
             <th>Name</th>
             <th> WaterMeterNo</th>
             <th> CustomerCode</th>
-            <th>Address</th>
-            <th>PhoneNo</th>
-            <th>PresentMR</th>
-            <th>PreviousMR</th>
-            <th>Details</th>
+            
            
           </tr>
         </thead>
         <tbody>
-         <tr   *ngFor= "let b of list">
+         <tr   *ngFor= "let b of list | filter:searchText">
 
                 <td>{{b.waterMeterNo}}</td>
                 <td>{{b.name}}</td>
                 <td>{{b.customerCode}}</td>
-                <td>{{b.address}}</td>
-                <td>{{b.phoneNo}}</td>
-                <td>{{b.presentMR}}</td>
-                <td>{{b.previousMR}}</td>
+                
                 
                 <td>
-                    <a routerLink="/view" class="btn btn-sm btn-primary mr-2">Details</a>
+                    <a routerLink="/edit/{{b.waterMeterNo}}" class="btn btn-sm btn-primary mr-2">Details</a>
                         
                     </td>
 
@@ -65,8 +56,7 @@
         </tbody>
 
         </table>
-    </div>
-</div>
+    
 
 </div>
 </section>

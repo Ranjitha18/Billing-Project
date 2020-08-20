@@ -3,14 +3,13 @@
   <section class="conatiner-fluid bg-light p-4">
      <h3>{{isNew?"New":"Edit"}}CustomerList</h3>
      
-     <div style="padding-left: 40%;">
-        
+     
            <div class="col-md-4 main " >
               <form class="form">
                   <div class="form-group ">
                       <label class = "form-label">WaterMeterNo : </label>
-                      <input type="text" class="form-control" 
-                      [(ngModel)]= "list.waterMeterNo"  name = "WaterMeterNo" >
+                      <input type="number" class="form-control" 
+                      [(ngModel)]= "list.waterMeterNo"  name = "WaterMeterNo" [readonly]="!isNew" required>
                     </div>
                     <div class="form-group">
                       <label class = "form-label" >Name :</label>
@@ -48,12 +47,12 @@
                     </div>
  
                     <div class="form-group text-center">
-                      <button (click)="addC()">submit</button>                 
+                     <button (click)="addC()">submit</button>           
                              </div> 
                   </form>
                     </div>
         
        
-      </div>
+      
 
  </section>

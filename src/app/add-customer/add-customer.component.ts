@@ -36,10 +36,10 @@ export class AddCustomerComponent implements OnInit {
     }*/
     this.actRt.params.subscribe(
       (params)=>{
-        let id = params.id;
-        if(id){
+        let waterMeterNo = params.waterMeterNo;
+        if(waterMeterNo){
           this.isNew=false;
-          this.Ss.getById(id).subscribe(
+          this.Ss.getById(waterMeterNo).subscribe(
             (data)=>{this.list=data}
           );
         }
@@ -57,7 +57,7 @@ export class AddCustomerComponent implements OnInit {
    ob.subscribe(
      (data)=>{
        let waterMeterNo = data.waterMeterNo;
-       this.router.navigateByUrl(`/list/${waterMeterNo}`);
+       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${waterMeterNo}`);
      }
    );
   }
