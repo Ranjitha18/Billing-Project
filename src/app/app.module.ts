@@ -13,7 +13,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ViewComponent } from './view/view.component';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { MessageBoxComponent } from './message-box/message-box.component'
-import{Ng2SearchPipeModule} from 'ng2-search-filter';
+import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import{Ng2SearchPipeModule} from 'ng2-search-filter';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    Ng2SearchPipeModule
+    Ng2FilterPipeModule
     
   ],
   providers: [],

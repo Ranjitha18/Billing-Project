@@ -4,6 +4,7 @@ import { ServiceService } from '../services/service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-add-customer',
   templateUrl: './add-customer.component.html',
@@ -36,10 +37,10 @@ export class AddCustomerComponent implements OnInit {
     }*/
     this.actRt.params.subscribe(
       (params)=>{
-        let waterMeterNo = params.waterMeterNo;
-        if(waterMeterNo){
+        let id = params.id;
+        if(id){
           this.isNew=false;
-          this.Ss.getById(waterMeterNo).subscribe(
+          this.Ss.getById(id).subscribe(
             (data)=>{this.list=data}
           );
         }
@@ -56,8 +57,8 @@ export class AddCustomerComponent implements OnInit {
     }
    ob.subscribe(
      (data)=>{
-       let waterMeterNo = data.waterMeterNo;
-       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${waterMeterNo}`);
+       let id = data.id;
+       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${id}`);
      }
    );
   }

@@ -9,10 +9,10 @@ import { ViewComponent } from './view/view.component';
 const routes: Routes = [
   {path:'',component :HomeComponent},
   {path : 'admin', component: AdminComponent},
-  {path : 'list/:msgCode/:waterMeterNo', component:CustomerSearchComponent},
+  {path : 'list/:msgCode/:id', component:CustomerSearchComponent},
   {path : 'add', component:AddCustomerComponent},
-  {path :'view', component:ViewComponent},
-  {path : 'edit/:waterMeterNo', component:AddCustomerComponent},
+  {path :'view/:id', component:ViewComponent},
+  {path : 'edit/:id', component:AddCustomerComponent},
 ];
 
 @NgModule({

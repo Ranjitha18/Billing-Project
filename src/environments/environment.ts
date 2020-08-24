@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   title : "BillingP",
   tagLine : "A Knowledge Hub",
-  api_url : "http://localhost:5553/books"
+  api_url1 : "http://localhost:8081/api",
+  api_url2:"http://localhost:8081/bill"
 };
 
 /*

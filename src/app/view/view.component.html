@@ -1,1 +1,66 @@
-<p>view works!</p>
+<section class="conatiner-fluid bg-light p-4">
+    <h3>{{isNew?"New":"View"}}CustomerList</h3>
+    <div class="col-md-4 main " >
+        <form class="form">
+            <div class="form-group ">
+                <label class = "form-label">id : </label>
+                <input type="number" class="form-control" 
+                [(ngModel)]= "list.id"  name = "id" [readonly]="!isNew" required>
+              </div>
+              <div class="form-group">
+                <label class = "form-label" > consumerName :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list. consumerName"  name= " consumerName" >
+              </div>
+              <div class="form-group">
+                <label class = "form-label">waterMeterNumber :</label>
+                <input type="text" class="form-control"
+                 [(ngModel)]="list.waterMeterNumber"    name = "waterMeterNumber">
+              </div>
+              
+              <div class="form-group">
+                <label class = "form-label">consumerId :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list.consumerId"    name = "consumerId">
+              </div>
+                
+              <div class="form-group">
+                <label class = "form-label">consumerAddress :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list.consumerAddress"    name = "consumerAddress">
+              </div>
+
+              <div class="form-group">
+                <label class = "form-label">contactNumber :</label>
+                <input type="text" class="form-control"
+                 [(ngModel)]="list.contactNumber"    name = "contactNumber">
+              </div>
+
+              <div class="form-group">
+                <label class = "form-label">consumerType :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list.consumerType"    name = "consumerType">
+              </div>
+
+              <div class="form-group">
+                <label class = "form-label">presentMeterReading :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list.presentMeterReading"    name = "presentMeterReading">
+              </div>
+
+              <div class="form-group">
+                <label class = "form-label">previousMeterReading :</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="list.previousMeterReading"    name = "previousMeterReading">
+              </div>
+
+              <div class="form-group text-center">
+               <button (click)="addC()">submit</button>           
+                       </div> 
+            </form>
+              </div>
+  
+ 
+
+
+</section>    
