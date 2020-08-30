@@ -7,12 +7,14 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
-  {path:'',component :HomeComponent},
-  {path : 'admin', component: AdminComponent},
-  {path : 'list/:msgCode/:id', component:CustomerSearchComponent},
+  
+  {path : '', component: AdminComponent},
+  {path:'home',component :HomeComponent},
+  {path : 'list/:msgCode/:consumerId', component:CustomerSearchComponent},
   {path : 'add', component:AddCustomerComponent},
-  {path :'view/:id', component:ViewComponent},
-  {path : 'edit/:id', component:AddCustomerComponent},
+  {path :'view/:consumerId', component:ViewComponent},
+  {path : 'edit/:consumerId', component:AddCustomerComponent},
+  {path : 'list', component:CustomerSearchComponent},
 ];
 
 @NgModule({

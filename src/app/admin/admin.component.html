@@ -1,40 +1,75 @@
-<div *ngIf="islogin; else ec ">
-   <div class="sidenav">
+<!--<div *ngIf="islogin; else ec ">
+   <!--<div style="background-image: url(./assets/img/jakpost.travel-live-water-wallpaper-hd-2886150.jpg);height: 755px;background-size: 100%;">
+   
       <section>
          <br>
          <div class="login-main-text">
-            <h2><SPAN STYLE="color: rgb(240, 240, 240); font-size: 55pt;align-content: center;">Water Billing System
-            </SPAN></h2>
+            <h1><SPAN STYLE="color: rgb(240, 240, 240); font-size: 55pt;align-content: center;">Water Billing System
+            </SPAN></h1>
             
-            <br>
-       <p><span style="color: rgb(69, 139, 201); font-size: 20pt;font-family:Quicksand-Light ;"><b>Admin Log In</b></span>
-       </p>    
+           
+       <h2><SPAN STYLE=" color: aliceblue; font-size: 40pt;font-family:Quicksand-Light ;"><strong> Admin Login</strong></SPAN></h2>
+          
          </div>
 
-<div style="padding-left: 40%;">
+<div style="padding-left: 35%; margin:5%">
               
   <div class="col-md-4 main " >
-     <div class="login-form">
-        <div class="form-group">
+   <div class="login-form">
+      <div class="form-group">
            <label><span style="color: aliceblue"><b>Username</b> </span></label>
            <input type="text " class="form-control" placeholder="User Name" [(ngModel)]="username">
+        
         </div>
         <div class="form-group">
            <label><span style="color: aliceblue"><b>Password</b></span></label>
            <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
-        </div>
+         </div>
         <button type="submit" class="btn btn-secondary" (click)="login()">Login</button>
-     </div> 
+      </div>
+   </div>
      </div>
-</div>
 
  </section> 
 
-</div>
+
+
 </div>
 
 <ng-template #ec>
   <app-header></app-header>
    
- </ng-template>
-  
+ </ng-template>-->
+ 
+ 
+ <mat-card class="example-card" *ngIf="islogin; else ec ">
+   <mat-card-header>
+     <mat-card-title>Login</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+     <form class="example-form">
+       <table class="example-full-width" cellspacing="0">
+         <tr>
+           <td>
+             <mat-form-field class="example-full-width">
+             <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+             </mat-form-field>
+           </td>
+         </tr>
+         <tr>
+         <td><mat-form-field class="example-full-width">
+           <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+         </mat-form-field></td>
+       </tr></table>
+     </form>
+     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+   </mat-card-content>
+   <mat-card-actions>
+     <button mat-raised-button (click)="login()" color="primary">Login</button>
+   </mat-card-actions>
+ </mat-card>
+ <ng-template #ec>
+   <app-header></app-header>
+   <app-customer-search></app-customer-search>
+    
+  </ng-template>

@@ -23,10 +23,10 @@ export class ViewComponent implements OnInit {
 
     this.actRt.params.subscribe(
       (params)=>{
-        let id = params.id;
-        if(id){
+        let consumerId = params.consumerId;
+        if(consumerId){
           this.isNew=false;
-          this.Ss.getById(id).subscribe(
+          this.Ss.getById(consumerId).subscribe(
             (data)=>{this.list=data}
           );
         }
@@ -39,12 +39,12 @@ export class ViewComponent implements OnInit {
     if(this.isNew){
    ob=this.Ss.add(this.list);
     }else{
-      ob=this.Ss.modify(this.list);
+      ob=this.Ss.modifyChallan(this.list);
     }
    ob.subscribe(
      (data)=>{
-       let id = data.id;
-       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${id}`);
+       let consumerId = data.consumerId;
+       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${consumerId}`);
      }
    );
   }

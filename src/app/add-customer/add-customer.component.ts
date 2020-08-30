@@ -19,7 +19,7 @@ export class AddCustomerComponent implements OnInit {
   constructor(private actRt:ActivatedRoute,private Ss:ServiceService,private router : Router) {
     this.list=new CustomerList();
     this.isNew=true;
-
+    
 
    }
 
@@ -37,10 +37,10 @@ export class AddCustomerComponent implements OnInit {
     }*/
     this.actRt.params.subscribe(
       (params)=>{
-        let id = params.id;
-        if(id){
+        let consumerId = params.consumerId;
+        if(consumerId){
           this.isNew=false;
-          this.Ss.getById(id).subscribe(
+          this.Ss.getById(consumerId).subscribe(
             (data)=>{this.list=data}
           );
         }
@@ -57,9 +57,11 @@ export class AddCustomerComponent implements OnInit {
     }
    ob.subscribe(
      (data)=>{
-       let id = data.id;
-       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${id}`);
+       let consumerId = data.consumerId;
+       this.router.navigateByUrl(`/list/${this.isNew?0:1}/${consumerId}`);
      }
    );
   }
-}
+ 
+  }
+

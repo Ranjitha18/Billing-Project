@@ -5,11 +5,17 @@ export class CustomerList{
    consumerId: number;
    consumerAddress: string;
    contactNumber: number;
-   consumerType: number;
-   //previousMR: number;
-   totalAmountToPay:number;
+   consumerTypes: number;   
    consumedWater:number;
    presentMeterReading:number;
    previousMeterReading:number;
-    
+   challanNumber:number;
+   createDate:number;
+   updateDate:number;
+   paidAmount:number;
+   billNumber:number;
+   consumerType_id:number;
+
+   
+   
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {CustomerList} from '../model/customerlist'
 //import { FormsModule } from '@angular/forms';
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, forkJoin } from 'rxjs';
 import { HttpClient,HttpResponse} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -46,13 +46,16 @@ export class ServiceService {
  }
 
  public add(clist:CustomerList) : Observable<CustomerList>{
-   return this.http.post<CustomerList>(this.api_url1,clist);
- }
-
- public getById(id : number): Observable<CustomerList>{
-   return this.http.get<CustomerList>(`${this.api_url2}/${id}`);
+  return this.http.post<CustomerList>(`${this.api_url1}`+'/consumer'+'/create',clist);
+  }
+ public getById(consumerId : number): Observable<CustomerList>{
+   return this.http.get<CustomerList>(`${this.api_url1}/${consumerId}`);
  }
  public modify(clist:CustomerList): Observable<CustomerList>{
-   return this.http.put<CustomerList>(this.api_url2,clist);
+   return this.http.put<CustomerList>(`${this.api_url1}`+'/consumer'+'/update',clist);
  }
+ public modifyChallan(clist:CustomerList): Observable<CustomerList>{
+  return this.http.put<CustomerList>(`${this.api_url1}`+'/challan'+'/update',clist);
+}
+ 
 }
