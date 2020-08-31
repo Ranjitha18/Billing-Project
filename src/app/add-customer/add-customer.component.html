@@ -3,45 +3,125 @@
   <section class="conatiner-fluid bg-light p-4">
      <h3>{{isNew?"New":"Edit"}}CustomerList</h3>
      
-     
-           <div class="col-md-4 main " >
-              <form class="form">
-                  <div class="form-group ">
+         <div class="example">
+           <mat-card class="example-full-width">
+            <form class="example-form">
+              <table class="example-full-width" cellspacing="0" withd="100%">
+                <tr>
+                  <td>
+              <mat-form-field class="example-full-width">
                       <label class = "form-label">id : </label>
-                      <input type="number" class="form-control" 
+                      <input type="number" class="form-control" matInput placeholder="id"
                       [(ngModel)]= "list.id"  name = "id" [readonly]="!isNew" required>
-                    </div>
-                    <div class="form-group">
+                    </mat-form-field>
+                    </td>
+                    </tr>
+                    </table>
+                   
+                      <table class="example-full-width" cellspacing="0" withd="100%">
+                        <tr>
+                          <td>
+                    <mat-form-field class="example-full-width">
                       <label class = "form-label" > consumerName :</label>
-                      <input type="text" class="form-control" 
+                      <input type="text" class="form-control" matInput placeholder="consumerName"
                       [(ngModel)]="list.consumerName"  name= " consumerName" >
-                    </div>
-                    <div class="form-group">
+                    </mat-form-field>
+                          </td>
+                          </tr>
+                      </table>
+                          
+                    <table class="example-full-width" cellspacing="0" withd="100%">
+                      <tr>
+                         <td>
+                    <mat-form-field class="example-full-width">
                       <label class = "form-label">waterMeterNumber :</label>
-                      <input type="text" class="form-control"
+                      <input type="text" class="form-control" matInput placeholder="waterMeterNumber"
                        [(ngModel)]="list.waterMeterNumber"    name = "waterMeterNumber">
-                    </div>    
-                    <div class="form-group">
+                      </mat-form-field>  
+                                    </td>
+                                  </tr>
+                                </table>
+                               
+                                  <table class="example-full-width" cellspacing="0" withd="100%">
+                                    <tr>
+                                      <td> 
+                    <mat-form-field class="example-full-width">
                       <label class = "form-label">consumerAddress :</label>
-                      <input type="text" class="form-control" 
+                      <input type="text" class="form-control" matInput placeholder="consumerAddress"
                       [(ngModel)]="list.consumerAddress"    name = "consumerAddress">
-                    </div>
-
-                    <div class="form-group">
+                    </mat-form-field>
+                             </td>
+                             </tr>
+                             </table>
+                             
+                              <table class="example-full-width" cellspacing="0" withd="100%">
+                                <tr>
+                                  <td>
+                    <mat-form-field class="example-full-width">
                       <label class = "form-label">contactNumber :</label>
-                      <input type="text" class="form-control"
+                      <input type="text" class="form-control" matInput placeholder="contactNumber"
                        [(ngModel)]="list.contactNumber"    name = "contactNumber">
-                    </div>
-
-                    <div class="form-group">
+                      </mat-form-field>
+                      </td>
+                                </tr>
+                              </table>
+                              
+                                <table class="example-full-width" cellspacing="0" withd="100%">
+                                  <tr>
+                                    <td>
+                    <mat-form-field class="example-full-width">
                       <label class = "form-label">consumerTypes :</label>
-                      <input type="text" class="form-control" 
+                      <input type="text" class="form-control" matInput placeholder="consumerTypes"
                       [(ngModel)]="list.consumerTypes"    name = "consumerTypes">
-                    </div>
- 
+                    </mat-form-field>
+                         </td>
+                         </tr>
+                                </table>
+                              </form>
                     <div class="form-group text-center">
                      <button (click)="addC()">submit</button>           
                              </div> 
-                  </form>
-                    </div>
+                             
+                            </mat-card>
+                            </div>
  </section>
+ <!--<div class="col-md-4 main " >
+  <form class="form">
+      <div class="form-group ">
+          <label class = "form-label">id : </label>
+          <input type="number" class="form-control" 
+          [(ngModel)]= "list.id"  name = "id" [readonly]="!isNew" required>
+        </div>
+        <div class="form-group">
+          <label class = "form-label" > consumerName :</label>
+          <input type="text" class="form-control" 
+          [(ngModel)]="list.consumerName"  name= " consumerName" >
+        </div>
+        <div class="form-group">
+          <label class = "form-label">waterMeterNumber :</label>
+          <input type="text" class="form-control"
+           [(ngModel)]="list.waterMeterNumber"    name = "waterMeterNumber">
+        </div>    
+        <div class="form-group">
+          <label class = "form-label">consumerAddress :</label>
+          <input type="text" class="form-control" 
+          [(ngModel)]="list.consumerAddress"    name = "consumerAddress">
+        </div>
+
+        <div class="form-group">
+          <label class = "form-label">contactNumber :</label>
+          <input type="text" class="form-control"
+           [(ngModel)]="list.contactNumber"    name = "contactNumber">
+        </div>
+
+        <div class="form-group">
+          <label class = "form-label">consumerTypes :</label>
+          <input type="text" class="form-control" 
+          [(ngModel)]="list.consumerTypes"    name = "consumerTypes">
+        </div>
+
+        <div class="form-group text-center">
+         <button (click)="addC()">submit</button>           
+                 </div> 
+      </form>
+        </div>-->

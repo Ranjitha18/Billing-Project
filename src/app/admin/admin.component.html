@@ -1,18 +1,40 @@
-<!--<div *ngIf="islogin; else ec ">
-   <!--<div style="background-image: url(./assets/img/jakpost.travel-live-water-wallpaper-hd-2886150.jpg);height: 755px;background-size: 100%;">
-   
-      <section>
+
+<div *ngIf="islogin; else ec ">
+   <div style="background-image: url(./assets/img/jakpost.travel-live-water-wallpaper-hd-2886150.jpg);height: 755px;background-size: 100%;">
+    <section>
+      
          <br>
          <div class="login-main-text">
-            <h1><SPAN STYLE="color: rgb(240, 240, 240); font-size: 55pt;align-content: center;">Water Billing System
-            </SPAN></h1>
-            
-           
-       <h2><SPAN STYLE=" color: aliceblue; font-size: 40pt;font-family:Quicksand-Light ;"><strong> Admin Login</strong></SPAN></h2>
-          
-         </div>
+            <h1><SPAN STYLE="color: rgb(39, 26, 224); font-size: 55pt;align-content: center;">Water Billing System
+            </SPAN></h1> 
+            <br>  
+       <h2><SPAN STYLE=" color: rgb(24, 130, 223); font-size: 40pt;font-family:Quicksand-Light ;"><strong> Admin Login</strong></SPAN></h2>
+           </div>
+    <div class="example">
+   <mat-card-content>
+     <form class="example-form">
+       <table class="example-full-width" cellspacing="0" withd="100%">
+         <tr>
+           <td>
+             <mat-form-field class="example-full-width" color="accent" font-size="50px">
+             <input  class= "example-input" matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+             </mat-form-field>
+           </td>
+         </tr>
+         <tr>
+         <td><mat-form-field class="example-full-width">
+           <input class="color" matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+         </mat-form-field></td>
+       </tr></table>
+     </form>
+     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+   </mat-card-content>
+   <mat-card-actions>
+     <button mat-raised-button (click)="login()" color="primary">Login</button>
+   </mat-card-actions>
+  </div>
 
-<div style="padding-left: 35%; margin:5%">
+<!--<div style="padding-left: 35%; margin:5%">
               
   <div class="col-md-4 main " >
    <div class="login-form">
@@ -28,21 +50,17 @@
         <button type="submit" class="btn btn-secondary" (click)="login()">Login</button>
       </div>
    </div>
-     </div>
+     </div>-->
 
- </section> 
-
-
+    </section> 
 
 </div>
 
-<ng-template #ec>
-  <app-header></app-header>
-   
- </ng-template>-->
+</div>
+
  
  
- <mat-card class="example-card" *ngIf="islogin; else ec ">
+ <!--<mat-card class="example-card" *ngIf="islogin; else ec ">
    <mat-card-header>
      <mat-card-title>Login</mat-card-title>
    </mat-card-header>
@@ -67,7 +85,7 @@
    <mat-card-actions>
      <button mat-raised-button (click)="login()" color="primary">Login</button>
    </mat-card-actions>
- </mat-card>
+ </mat-card>-->
  <ng-template #ec>
    <app-header></app-header>
    <app-customer-search></app-customer-search>

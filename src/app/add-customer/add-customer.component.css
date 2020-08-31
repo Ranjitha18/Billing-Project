@@ -38,3 +38,10 @@ h2 {
 
 
    }
+   mat-card{
+    width: fit-content;
+}
+ .example{ 
+   display:inline-block;
+   width: max-content;
+  }
